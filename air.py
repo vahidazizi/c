@@ -31,23 +31,14 @@ def show_score(update, context):
     else:
         update.message.reply_text('شما هنوز بازی نکرده‌اید!')
 
-import random
-
 # دستور برای تبدیل امتیاز به کد هدیه
 def redeem_gift(update, context):
-    # تصادفی انتخاب کنید که عملیاتی انجام شود
-    choice = random.choice(["send_gift", "show_message"])
-    
-    if choice == "send_gift":
-        # ارسال کد هدیه
-        pass
-    elif choice == "show_message":
-        # نمایش پیام
-        pass
+    # کد هدیه را از امتیاز کاربر تولید کنید و به کاربر ارسال کنید
+    pass  # به عنوان مثال، اینجا یک عملیات دیگر اضافه کنید
 
 # دستور برای ارتباط با پشتیبانی
 def support(update, context):
-    update.message.reply_text('برای ارتباط با پشتیبانی، ایمیل بفرستید به: @evol_upside')
+    update.message.reply_text('برای ارتباط با پشتیبانی، ایمیل بفرستید به: support@example.com')
 
 # دستور برای ایجاد کد رفرال
 def generate_referral_code(update, context):
@@ -62,7 +53,7 @@ def show_captcha(update, context):
     update.message.reply_photo(photo=data)
 
 # افزودن دستورها به ربات
-updater = Updater("6873573354:AAFW_Ws5_sLJz-XxghhFLGK_lo2D3CiExko", use_context=True)
+updater = Updater("6618575314:AAEhdwtRFhFelEvQDUn11n5bpZiwe4OEjUs", use_context=True)
 dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler("start", start_game))
 dispatcher.add_handler(CommandHandler("score", show_score))
