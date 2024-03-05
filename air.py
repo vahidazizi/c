@@ -31,9 +31,19 @@ def show_score(update, context):
     else:
         update.message.reply_text('شما هنوز بازی نکرده‌اید!')
 
+import random
+
 # دستور برای تبدیل امتیاز به کد هدیه
 def redeem_gift(update, context):
-    # کد هدیه را از امتیاز کاربر تولید کنید و به کاربر ارسال کنید
+    # تصادفی انتخاب کنید که عملیاتی انجام شود
+    choice = random.choice(["send_gift", "show_message"])
+    
+    if choice == "send_gift":
+        # ارسال کد هدیه
+        pass
+    elif choice == "show_message":
+        # نمایش پیام
+        pass
 
 # دستور برای ارتباط با پشتیبانی
 def support(update, context):
