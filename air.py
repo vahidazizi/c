@@ -43,7 +43,7 @@ def show_captcha(update: Update, context: CallbackContext) -> None:
 # تابع اصلی برای شروع ربات
 def main() -> None:
     # تنظیم و شروع ربات
-    updater = Updater("TOKEN")
+    updater = Updater("6618575314:AAEhdwtRFhFelEvQDUn11n5bpZiwe4OEjUs")
     dispatcher = updater.dispatcher
 
     # افزودن دستورها به ربات
