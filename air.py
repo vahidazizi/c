@@ -1,5 +1,5 @@
 from telegram import Update, ForceReply
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackContext
 
 # ذخیره امتیازات کاربران
 user_scores = {}
@@ -53,6 +53,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("support", support))
     dispatcher.add_handler(CommandHandler("referral", generate_referral_code))
     dispatcher.add_handler(CommandHandler("captcha", show_captcha))
+    dispatcher.add_handler(MessageHandler(Filters.text, support))  # به عنوان مثال فقط پیام‌های متنی را پاسخ می‌دهد
 
     # شروع ربات
     updater.start_polling()
